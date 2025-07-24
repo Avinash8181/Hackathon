@@ -10,7 +10,7 @@ import lombok.Data;
 public class Activity {
     @Id
     private String activityCode;
-
+    private String activityType;
     private String name;
     private String description;
 

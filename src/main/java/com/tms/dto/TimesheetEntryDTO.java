@@ -1,16 +1,16 @@
 package com.tms.dto;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import lombok.Data;
 
 @Data
 public class TimesheetEntryDTO {
     private Integer projectId;
-    private Integer activityCode;
-    private LocalDate date;
+    private String activityCode;
+    private LocalDateTime date;
     private BigDecimal hoursWorked;
-    private String comments;
-
+    private String status;
+    private String managerComment;
 }

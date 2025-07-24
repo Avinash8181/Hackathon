@@ -1,10 +1,13 @@
 package com.tms.entity;
 
-import jakarta.persistence.*;
+import java.time.LocalDateTime;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
-
-import java.time.LocalDate;
-import java.util.Date;
 
 
 @Data
@@ -26,8 +29,7 @@ public class TimesheetEntry {
     @JoinColumn(name = "activityCode")
     private Activity activity;
 
-    private LocalDate date;
+    private LocalDateTime date;
     private double hoursWorked;
     private String comments;
-
 }
